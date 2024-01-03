@@ -10,5 +10,14 @@ all I'm saying is just stick the metadata I though of on top of your readme file
 Here we tell the complete story and when it is appropriate we mentions the [epics](e/epic-name/readme.md) that together comlete the story
 
 <!--- Table Start -->
-<table><thead><tr><th>Type</th><th>Title</th><th>Take</th><th>Status</th><th>Progress</th><th>Tags</th></tr></thead><tbody><tr style="color: green;"><td> epic </td><td> <a href='./e/epic-name/readme.md'>Some cool title</a> </td><td> Just started it </td><td> new </td><td> 10% </td><td> tag1, tag2 </td></tr><tr><td> feature </td><td> &nbsp;&nbsp;<a href='./e/epic-name/e/feature1/readme.md'>feature's title</a> </td><td> Looks easy </td><td> ready </td><td> 60% </td><td> tag1, tag2 </td></tr><tr><td> story </td><td> &nbsp;&nbsp;&nbsp;&nbsp;<a href='./e/epic-name/e/feature1/e/story3/readme.md'>3rd story is the charm</a> </td><td> Just started it </td><td> active </td><td> 10% </td><td>  </td></tr><tr><td> story </td><td> &nbsp;&nbsp;&nbsp;&nbsp;<a href='./e/epic-name/e/feature1/e/story2/readme.md'>another story title</a> </td><td> Just started it </td><td> active </td><td> 10% </td><td>  </td></tr><tr><td> bug </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='./e/epic-name/e/feature1/e/story2/e/bug1/readme.md'>bug title</a> </td><td>  </td><td> new </td><td> 0% </td><td>  </td></tr><tr><td> task </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='./e/epic-name/e/feature1/e/story2/e/task1/readme.md'>task title</a> </td><td> Just started it </td><td> active </td><td> 30% </td><td>  </td></tr><tr><td> story </td><td> &nbsp;&nbsp;&nbsp;&nbsp;<a href='./e/epic-name/e/feature1/e/story1/readme.md'>story title</a> </td><td> needs description </td><td> new </td><td> 0% </td><td>  </td></tr></tbody></table>
+| Type | Title | Take | Status | Progress | Tags |
+|------|-------|------|--------|----------|------|
+| epic | [Some cool title](./e/epic-name/readme.md) | Just started it | new | 10% | tag1, tag2 |
+| feature | &nbsp;&nbsp;[feature's title](./e/epic-name/e/feature1/readme.md) | Looks easy | ready | 60% | tag1, tag2 |
+| story | &nbsp;&nbsp;&nbsp;&nbsp;[3rd story is the charm](./e/epic-name/e/feature1/e/story3/readme.md) | Just started it | active | 10% |  |
+| story | &nbsp;&nbsp;&nbsp;&nbsp;[another story title](./e/epic-name/e/feature1/e/story2/readme.md) | Just started it | active | 10% |  |
+| bug | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[bug title](./e/epic-name/e/feature1/e/story2/e/bug1/readme.md) |  | new | 0% |  |
+| task | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[task title](./e/epic-name/e/feature1/e/story2/e/task1/readme.md) | Just started it | active | 30% |  |
+| story | &nbsp;&nbsp;&nbsp;&nbsp;[story title](./e/epic-name/e/feature1/e/story1/readme.md) | needs description | new | 0% |  |
+
 <!--- Table End -->
