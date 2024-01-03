@@ -19,7 +19,7 @@ def parse_readme_metadata(readme_path):
 
 def generate_table_row(metadata, level, path):
     tabs = ('&nbsp;' * (level-1)*2)
-    row = f"| { tabs}{metadata['type']} | [{metadata['title']}]({path}) | {metadata['take']} | {metadata['status']} | {metadata['progress']}% | {', '.join(metadata['tags']) if 'tags' in metadata else ''} |\n"
+    row = f"| {metadata['type']} | { tabs}[{metadata['title']}]({path}) | {metadata['take']} | {metadata['status']} | {metadata['progress']}% | {', '.join(metadata['tags']) if 'tags' in metadata else ''} |\n"
     return row
 
 def generate_table_content():

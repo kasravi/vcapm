@@ -5,7 +5,7 @@
         "take": "Just started it", 
         "status": "active", 
         "progress":10, 
-        "tags":["tag1", "tag2"]
+        "tags":[]
     } 
 /metadata--->
 # Sample epic 
