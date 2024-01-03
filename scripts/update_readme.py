@@ -19,23 +19,35 @@ def parse_readme_metadata(readme_path):
 
 def generate_table_row(metadata, level, path):
     tabs = ('&nbsp;' * (level-1)*2)
-    row = f"| {metadata['type']} | { tabs}[{metadata['title']}]({path}) | {metadata['take']} | {metadata['status']} | {metadata['progress']}% | {', '.join(metadata['tags']) if 'tags' in metadata else ''} |\n"
+    row = f"<td> {metadata['type']} </td><td> { tabs}<a href='{path}'>{metadata['title']}</a> </td><td> {metadata['take']} </td><td> {metadata['status']} </td><td> {metadata['progress']}% </td><td> {', '.join(metadata['tags']) if 'tags' in metadata else ''} </td>"
     return row
 
-def generate_table_content():
-    table_content = "| Type | Title | Take | Status | Progress | Tags |\n|------|-------|------|--------|----------|------|\n"
+def generate_html_table_content():
+    html_table_content = "<table><thead><tr><th>Type</th><th>Title</th><th>Take</th><th>Status</th><th>Progress</th><th>Tags</th></tr></thead><tbody>"
     for root, dirs, files in os.walk('.'):
         if 'readme.md' in files:
             readme_path = os.path.join(root, 'readme.md')
             metadata = parse_readme_metadata(readme_path)
             if metadata:
                 level = len([a for a in root.split(os.sep) if a == "e"])
-                table_content += generate_table_row(metadata, level, readme_path)
-    return table_content
-# Generate HTML tree content
-html_tree_content = generate_table_content()
+                row = generate_table_row(metadata, level, readme_path)
+                # Apply conditional styling based on metadata (for example, if status is 'complete')
+                if metadata.get('type') == 'epic':
+                    html_table_content += f'<tr style="color: green;">{row}</tr>'
+                else:
+                    html_table_content += f'<tr>{row}</tr>'
+    html_table_content += "</tbody></table>"
+    return html_table_content
 
-with open('readme.md', 'w') as root_readme:  # Open in 'w' mode to truncate and write
-    root_readme.write(html_tree_content)
+html_table_content = generate_html_table_content()
+
+with open('readme.md', 'r+') as root_readme:
+    content = root_readme.read()
+    tree_start = content.find('<!--- Table Start -->')
+    tree_end = content.find('<!--- Table End -->', tree_start + 1)
+    updated_content = content[:tree_start + len('<!--- Table Start -->')] + "\n" + html_table_content + "\n" + content[tree_end:]
+    root_readme.seek(0)
+    root_readme.write(updated_content)
+    root_readme.truncate()
 
 print("Root README updated successfully with HTML tree!")
