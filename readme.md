@@ -7,7 +7,7 @@ So... if your mind isn't happy to work with Epic > Feature > Story > Task, defin
 all I'm saying is just stick the metadata I though of on top of your readme files and the project process will be generated, use whatever hierarchy you want. 
 
 ## Epics
-Here we tell the complete story and when it is appropriate we mentions the [epics](e/epic-name/readme.md) that together comlete the story
+Here we tell the complete story and when it is appropriate we mentions the [epics](epic-name/readme.md) that together comlete the story
 
 <!--- Table Start -->
 | Type | Title | Take | Status | Progress | Tags |

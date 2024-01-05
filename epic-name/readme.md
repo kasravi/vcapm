@@ -9,4 +9,4 @@
     } 
 /metadata--->
 # Sample epic 
-here we should tell the big picture story and while telling it mention [features](e/feature1/readme.md) when it is appropriate.
+here we should tell the big picture story and while telling it mention [features](feature1/readme.md) when it is appropriate.

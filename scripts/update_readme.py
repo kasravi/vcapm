@@ -28,7 +28,7 @@ def generate_table_content():
             readme_path = os.path.join(root, 'readme.md')
             metadata = parse_readme_metadata(readme_path)
             if metadata:
-                level = len([a for a in root.split(os.sep) if a == "e"])
+                level = len(root.split(os.sep))
                 table_content += generate_table_row(metadata, level, readme_path)
     return table_content
 

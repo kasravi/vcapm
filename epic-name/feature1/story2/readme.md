@@ -10,4 +10,4 @@
 /metadata--->
 # Sample epic 
 
-Here we break the story into tasks and mention the [task](e/task1/readme.md) in a place that makes sense. exactly not like this sample.
+Here we break the story into tasks and mention the [task](task1/readme.md) in a place that makes sense. exactly not like this sample.
