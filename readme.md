@@ -9,6 +9,7 @@ all I'm saying is just stick the metadata I though of on top of your readme file
 ## Epics
 Here we tell the complete story and when it is appropriate we mentions the [epics](epic-name/readme.md) that together comlete the story
 
+## Map
 <!--- Table Start -->
 | Type | Title | Take | Status | Progress | Tags |
 |------|-------|------|--------|----------|------|
